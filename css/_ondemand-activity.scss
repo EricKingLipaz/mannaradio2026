@@ -1,0 +1,77 @@
+.OnDemandActivity{
+    padding: 0;
+    .main-video.fullscreen{
+        transform: translate(-47%, -50%) rotate(90deg);
+        position: fixed;
+        z-index: 1000;
+        top: 50%;
+        left: 50%;
+        width: 160%;
+    }
+        .video-filters{
+            background: $dark;
+            display: flex;
+            z-index: -1000;
+            margin-top: 10%;
+            padding: .3em;
+            .filter{
+                color: $light;
+                padding: .3em;
+                margin: 0 .3em;
+                border-radius: 5px;
+            }
+            .filter.active{
+                background: $color1;
+                font-weight: bold;
+            }
+        }
+    .video-playlist{
+        padding: 0 .5em;
+        color: white;
+        position: fixed;
+        top: 58%;
+        width: 100%;
+        height: 42%;
+        overflow-y: scroll;
+        .vid{
+            position: relative;
+            display: flex;
+            padding: 1em .4em;
+            border-radius: 10px;
+            transition: .5s;
+            video{
+                width: 15%;
+            }
+            .thumbnail{
+                width: 15%;
+                display: none;
+                align-items: center;
+                img{
+                    width: 100%;
+                }
+            }
+            .content{
+                width: 85%;
+                padding: 1em;
+                display: block;
+                @include verticalCenter;
+                left: 15%;
+                .title{
+                    font-size: .8em;
+                }
+                .category{
+                    color: $color1;
+                    font-size: .8em;
+                }
+                .duration{
+                    @include verticalCenter;
+                    right: 5%;
+                    font-size: .8em;
+                }
+            }
+        }
+        .vid.active{
+            background: $dark;
+        }
+    }
+}

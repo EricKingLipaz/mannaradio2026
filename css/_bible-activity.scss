@@ -1,0 +1,58 @@
+.BibleActivity{
+    height: 100%;
+    background: $light1;
+    z-index: 1000;
+    transition: .5s;
+    top: 150%;
+    .header{
+        height: 10%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        left: 0;
+        padding: 1em;
+        background: $dark;
+        display: flex;
+        align-items: center;
+        *{
+            margin-right: .3em;
+        }
+        .inputs{
+            border-color: $color1;
+            padding: .5em;
+            color: $light;
+        }
+        input{
+            width: 65%;
+        }
+        select{
+            margin: 1em 0;
+            width: fit-content;
+            background: $dark;
+        }
+        .inputs::placeholder{
+            color: $light;
+        }
+    }
+    .bible-body{
+        top: 10%;
+        left: 0;
+        height: 90%;
+        position: fixed;
+        overflow: scroll;
+        .verse{
+            display: block;
+            width: 100%;
+            overflow: scroll;
+            .verse-num{
+                color: white;
+                background: $color1;
+                padding: 0 .3em;
+            }
+            .verse-text{
+                padding: 0 .5em;
+                margin-bottom: .5em;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.BankingDetailsActivity{
+    color: white;
+    text-align: center;
+    table{
+        text-align: left;
+        margin-top: 1em;
+        th{
+            background: $color1;
+        }
+        th, td{
+            padding: .3em .5em;
+        }
+    }
+}

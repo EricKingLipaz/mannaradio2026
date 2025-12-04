@@ -1,0 +1,126 @@
+.vu-player{
+    position: relative;
+    transition: .5s;
+    input[type="range"]{
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+    }
+    
+    input[type="range"]:focus{
+        outline: none;
+    }
+    
+    input[type="range"]::-webkit-slider-runnable-track{
+        width: 100%;
+        height: 5px;
+        cursor: pointer;
+        background: $color1;
+        @include verticalCenter();
+        position: relative;
+    }
+    
+    input[type="range"]::-webkit-slider-thumb{
+        display: none;
+    }
+    input[type="range"]::-webkit-slider-runnable-track{
+        width: 100%;
+        height: 5px;
+        border-radius: 50px;
+        cursor: pointer;
+        background: #ca581633;
+        @include verticalCenter();
+        position: relative;
+    }
+    input[type="range"]::-webkit-slider-thumb{
+        appearance: none;
+        width: 10px;
+        display: flex;
+        height: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        background: $color1;
+        @include verticalCenter();
+        position: relative;
+    }
+    video{
+        width: 100%;
+    }
+    .logo-watermark{
+        position: absolute;
+        right: 2%;
+        bottom: 12%;
+        width: 10%;
+        opacity: .6;
+        filter: brightness(0) invert(1);
+    }
+    .progress{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .video-progress{
+            background: #ca581633;
+            height: 7px;
+            position: relative;
+            width: 100%;
+            margin: 0 1em;
+            .vu-video-progress{
+                width: 0;
+                @include verticalCenter();
+            }
+        }
+    }
+    .controls{
+        background: $dark2;
+        position: absolute;
+        border: 1px solid $color1;
+        width: 100%;
+        color: $color1;
+        bottom: -10%;
+        padding: .5em;
+        display: flex;
+        align-items: center;
+        #orderVideoBtn{
+            border-radius: 5px;
+            i{
+                font-size: 1.2em;
+            }
+        }
+        i{
+            margin: 0 .3em;
+        }
+        p{
+            font-weight: bold;
+            font-size: .8em;
+            margin: 0 1em;
+            color: white;
+            i{
+                color: $color1;
+                margin: 0;
+            }
+        }
+        .vu-video-time{
+            margin: 0 1em;
+        }
+        .vu-fullscreen{
+            @include verticalCenter();
+            right: 2%;
+        }
+        .volume{
+            right: 7%;
+            display: flex;
+            align-items: center;
+            @include verticalCenter();
+            display: none;
+            i{
+                margin: 0;
+            }
+        }
+    }
+    .vu-ad-video{
+        // background: black;
+        video{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manna Temple</title>
+    <link rel="stylesheet" href="css/app_style.css">
+    <style>
+        .bgWhite{
+            background: #f0ddff;
+        }
+    </style>
+</head>
+<body class="bgWhite Admin">
+
+    <header>
+        <!-- <div class="searchPrayer" hidden>
+            <i class="material-icons">search</i>
+            <input type="search" class="inputs" id="searchPrayer" placeholder="Search Prayer Request">
+        </div> -->
+        <h1 class="activity-title">Prayer Requests</h1>
+    </header>
+
+    <div class="PrayerRequestsActivity Activity">
+        <div class="activity-title" hidden>Prayer Requests</div>
+
+        <ul class="requests-list">
+            <li class="request">
+                <div class="about">
+                    <h3 class="name">My Name</h3>
+                    <p class="prayerRequest">lorem ipsum asdkjfl;l;a asld;k fl;kl;aksdfjkkjhjasd f nljh asdhfl jhk j,h</p>
+                </div>
+                <div class="dateTime">
+                    <span class="date">22-03-2022</span> <br>
+                    <span class="time">12:00</span>
+                </div>
+            </li>
+        </ul>
+
+        <div class="request-details">
+            <div class="overlay"></div>
+        </div>
+
+
+    </div>
+
+    <!-- Events Activity -->
+    <div class="EventsActivity Activity">
+        <div class="new-event">
+            <h2>New Event</h2>
+            <form autocomplete="off">
+                <input type="text" class="inputs" id="newEventTitle" placeholder="Event Title">
+                <input type="date" class="inputs" id="newEventDate">
+                <textarea class="inputs" id="newEventDetails" cols="30" rows="5" placeholder="Event Details"></textarea>
+                <button type="button" class="primaryBtn" id="newEventBtn">Add Event</button>
+            </form>
+            <div class="response" ></div>
+        </div>
+
+        <div class="events-list">
+        </div>
+    </div>
+
+    <!-- Newsletter Activity -->
+    <div class="NewsletterActivity Activity">
+        <div class="new-post">
+            <h2>Add New Post</h2>
+            <form autocomplete="off">
+                <input type="text" class="inputs" id="newPostTitle" placeholder="Post Title">
+                <textarea class="inputs" id="newPostDetails" cols="30" rows="5" placeholder="Post Details"></textarea>
+                <button type="button" class="primaryBtn" id="newPostBtn">Submit Post</button>
+            </form>
+            <div class="response" ></div>
+        </div>
+
+        <div class="post-list">
+        </div>
+    </div>
+    <footer>
+        <!-- <div class="items active" id="newsBtn">
+            <i class="material-icons">feed</i>
+            <p class="label">Newsletter</p>
+        </div>
+        <div class="items" id="eventsBtn">
+            <i class="material-icons">event</i>
+            <p class="label">Events</p>
+        </div> -->
+        <div class="items active" id="requestsBtn">
+            <i class="material-icons">contact_support</i>
+            <p class="label">Requests</p>
+        </div>
+        <!-- <div class="items" id="ordersBtn">
+            <i class="material-icons">shopping_cart</i>
+            <p class="label">Orders</p>
+        </div>
+        <div class="items" id="photosBtn">
+            <i class="material-icons">photo_library</i>
+            <p class="label">Photos</p>
+        </div>
+        <div class="items" id="videosBtn">
+            <i class="material-icons">video_library</i>
+            <p class="label">Videos</p>
+        </div>
+        <div class="items">
+            <i class="material-icons">settings</i>
+            <p class="label">Settings</p>
+        </div>
+        <div class="items">
+            <i class="material-icons">power_settings_new</i>
+            <p class="label">Logout</p>
+        </div> -->
+    </footer>
+    
+    <script src="js/libraries/jquery-3.6.0.js"></script>
+    <script src="js/data-requestz.js"></script>
+    <script src="js/prayer-requestz.js"></script>
+    <script src="js/admin-activitiez.js"></script>
+    <script src="js/admin-footer.js"></script>
+    <script src="js/admin/add-event.js"></script>
+    <script src="js/admin/add-post.js"></script>
+</body>
+</html>

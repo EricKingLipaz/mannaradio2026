@@ -1,0 +1,50 @@
+.TvActivity{
+    .tv-container{
+        position: relative;
+        .skeleton{
+            height: 15em;
+            margin-bottom: .5em;
+            position: relative;
+            i{
+                @include middleCenter;
+                font-size: 5em;
+                opacity: .3;
+                color: white;
+                animation: skeleton 2s infinite alternate linear;
+            }
+            @keyframes skeleton {
+                0%{
+                    font-size: 5em;
+                }
+                50%{
+                    font-size: 6em;
+                }
+                100%{
+                    font-size: 5em;
+                }
+            }
+        }
+        .skeleton:nth-child(2){
+            height: 3em;
+        }
+        .skeleton:last-child{
+            height: 2em;
+        }
+        iframe{
+            width: 100%;
+        }
+        .loader{
+            width: 20%;
+            height: 50vh;
+            width: 100%;
+            z-index: 10000;
+            opacity: .8;
+            border-radius: 10px;
+            position: relative;
+            img{
+                width: 20%;
+                @include middleCenter();
+            }
+        }
+    }
+}

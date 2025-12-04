@@ -1,0 +1,200 @@
+@import url("libraries/fonts/font.css");
+@import url("libraries/icons.css");
+@import url("libraries/icons_outlined.css");
+*{
+    font-family: "Poppins";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    user-select: none;
+}
+.loader{
+    display: none;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    background: $light;
+    color: $dark2;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background:  -webkit-gradient(linear, left top, left bottom, from($dark1), to($dark2)) fixed;
+}
+
+i, .material-icons, .material-icons-outlined{
+    vertical-align: middle;
+}
+
+// Align Items to the center
+@mixin middleCenter{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Align Items to Vertical Center
+@mixin verticalCenter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// Align Items to Horizontal Center
+@mixin horizontalCenter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+// Align Items to Top Right
+@mixin topRight {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// Align Items to Top Right
+@mixin topLeft {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// Align Items to Bottom Right
+@mixin bottomRight {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    transform: translateY(-50%);
+}
+
+// Align Items to Top Right
+@mixin bottomLeft {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    transform: translateY(-50%);
+}
+
+.activities{
+    position: relative;
+    background: white;
+    transition: .3s all;
+}
+
+button{
+    border: none;
+    font-weight: bold;
+}
+
+button:hover{
+    opacity: .9;
+}
+
+button:active{
+    opacity: .8;
+}
+
+.inputs{
+    border: 1px solid $color2;
+    color: white;
+    background: transparent;
+}
+
+.inputs:hover, .inputs:focus{
+    border: 1px solid $color2;
+}
+
+input::placeholder{
+    color: $lightGrey;
+    opacity: .5;
+}
+
+textarea{
+    resize: none;
+}
+
+button:focus, .inputs:focus, .inputs:active{
+    outline: none;
+}
+
+.primaryBtn{
+    background: $color1;
+    padding: .5em;
+    color: white;
+    transition: .3s all;
+}
+
+.primaryBtn:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+
+.secondaryBtn{
+    border: 2px solid $color1;
+    background: transparent;
+    color:  $color1;
+    padding: .5em;
+    transition: .3s all;
+}
+
+.secondaryBtn:hover{
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.tertiaryBtn{
+    border: 2px solid black;
+    background: black;
+    color:  white;
+    padding: .5em;
+    transition: .3s all;
+}
+
+.tertiaryBtn:hover{
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+::-webkit-scrollbar{
+    background: white;
+    display: none;
+}
+::-webkit-scrollbar-thumb{
+    background-color: black;
+    border: 3px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+}
+
+.formResponse{
+    background: $color2;
+    color: white;
+    font-size: 1em;
+    font-style: italic;
+    padding: .5em 1em;
+    width: fit-content;
+    border-radius: 5px;
+    @include middleCenter();
+}
+
+.hidden{
+    display: none;
+}

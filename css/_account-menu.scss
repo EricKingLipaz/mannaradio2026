@@ -1,0 +1,13 @@
+.account-menu{
+    position: fixed;
+    right: -65%;
+    width: 60%;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 0 5px $lightGrey;
+    transition: .3s all;
+    border-radius: 0 0 0 5px;
+    .item{
+        padding: .5em 1em;
+    }
+}

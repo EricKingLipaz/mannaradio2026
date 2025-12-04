@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manna Temple</title>
+    <link rel="stylesheet" href="css/app_style.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+</head>
+    <body>
+
+        <div class="splash-screen">
+            <img class="appIcon" src="images/icon.png" alt="">
+            <div class="devLogo">
+                <p>Sponsors</p>
+                <img src="images/LiveNet-Studios-Logo-2-300x180.png" alt="">
+                <img src="images/selta.svg" alt="">
+            </div>
+        </div>
+
+        <header>
+            <i class="material-icons-outlined" id="mainMenu">menu</i>
+            <h1 class="activity-title"></h1>
+            <div id="accountMenu">
+                <i class="material-icons-outlined">menu_book</i>
+                <p>Bible</p>
+            </div>
+        </header>
+
+        <ul class="side-menu">
+            <i class="material-icons" id="closeMenuBtn">close</i>
+            <li class="item active" id="bankingDetailsBtn">Banking Details</li>
+            <li class="item" id="EventsBtn">Events</li>
+            <!-- <li class="item" id="galleryBtn">Gallery</li> -->
+            <li class="item" id="newsletterBtn">Newsletter</li>
+            <li class="item" id="aboutUsBtn">About Us</li>
+        </ul>
+
+
+        <!-- BIBLE ACTIVITY -->
+
+        <div class="BibleActivity Activity">
+            <div class="header">
+                <button class="primaryBtn" id="closeBible">
+                    <i class="material-icons">close</i>
+                    Close Bible
+                </button>
+                <!-- <input type="text" class="inputs" id="searchVerse" placeholder="Search Text"> -->
+
+                <input type="text" id="mtBook" value="0" hidden>
+                <input type="text" id="mtChapter" value="0" hidden>
+                <select class="inputs bible-books" id="bookSelect">
+                </select>
+                <select class="inputs bible-chapters" id="chapterSelect">
+                </select>
+            </div>
+            
+            <div class="bible-body">
+
+                <div class="verse">
+                    <h4 class="verse-num"></h4>
+                    <p class="verse-text"></p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TV ACTIVITY -->
+        <div class="TvActivity Activity">
+            <!-- Activity Title -->
+            <div class="activity-title" hidden>Manna TV</div>
+            <div class="loading"></div>
+
+            <!-- Activity Content -->
+            <div class="tv-container">
+                <div class="skeleton skeleton-vid">
+                    <i class="material-icons">play_circle</i>
+                </div>
+                <div class="skeleton skeleton-header"></div>
+                <div class="skeleton skeleton-text"></div>
+            </div>
+        </div>
+
+        <!-- RADIO ACTIVITY -->
+        <div class="RadioActivity Activity">
+            <div class="formResponse" hidden></div>
+            <div class="loading"></div>
+            <img src="images/5.jpeg" class="background">
+            <!-- Activity Title -->
+            <div class="activity-title" hidden>Manna Radio</div>
+            <!-- Activity Content -->
+            <div class="radio-container">
+
+                <div class="on-air">
+                    <h2 class="show-name">The Voice of The Truth</h2>
+                    <p class="host">Apostle Mabaso</p>
+
+                    <i class="material-icons-outlined" id="playRadio">play_circle</i>
+                </div>
+                <div class="get-in-touch">
+                    <i class="material-icons-outlined radioIcon">graphic_eq</i>
+
+                    <h3>Get In Touch...</h3>
+
+                        <button id="radioCall" class="primaryBtn">
+                            <i class="material-icons">
+                                <iconify-icon icon="mdi:phone" width="24" height="24"></iconify-icon>
+                            </i>
+                            +27 73 851 4499
+                        </button>
+                        <button id="radioWhatsapp" class="secondaryBtn">
+                            <i class="material-icons">
+                                <iconify-icon icon="mdi:whatsapp" width="24" height="24"></iconify-icon>
+                            </i>
+                            +27 73 851 4499
+                        </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRAYER REQUEST ACTIVTY -->
+
+        <div class="PrayerActivity Activity">
+            <div class="loading"></div>
+            <div class="activity-title" hidden>Prayer Request</div>
+            <form method="post">
+                <h3>Complete The Form</h3>
+            <div class="loading" hidden></div>
+
+                <div class="skeleton"></div>
+                <input type="text" class="inputs" id="nameRequest" placeholder="Your Name">
+                <input type="text" class="inputs" id="phoneRequest" placeholder="Phone Number">
+                <input type="text" class="inputs" id="locationRequest" placeholder="Location / Area">
+                <textarea class="inputs" id="prayerRequest" cols="30" rows="6" placeholder="Your Prayer Request..."></textarea>
+                <button type="button" id="submitRequestBtn" class="primaryBtn">Submit</button>
+                <div class="formResponse" hidden></div>
+            </form>
+        </div>
+
+        <!-- BANKING ACTIVITY -->
+        <div class="BankingDetailsActivity Activity">
+            <!-- Activity Title -->
+            <div class="activity-title" hidden>Banking Details</div>
+            <div class="loading"></div>
+
+            <h2>Sow A Seed Now...</h2>
+            <table>
+
+                <tr>
+                    <th>Bank Name</th>
+                    <td>Standard Bank</td>
+                </tr>
+                <tr>
+                    <th>Account Number</th>
+                    <td>10151728613</td>
+                </tr>
+                <tr>
+                    <th>Account Holder</th>
+                    <td>Manna Temple Church</td>
+                </tr>
+                <tr>
+                    <th>Branch Code</th>
+                    <td>000205</td>
+                </tr>
+                <tr>
+                    <th>Account Type</th>
+                    <td>Mymobiz</td>
+                </tr>
+                <tr>
+                    <th>Swift Address</th>
+                    <td>SBZA ZA JJ</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ABOUT US ACTIVITY -->
+        <div class="AboutUsActivity Activity">
+            <!-- Activity Title -->
+            <div class="activity-title" hidden>About Us</div>
+            <div class="loading"></div>
+
+            <h3>Find Us</h3>
+            <p>
+                Cnr Bloed and Bosman, Pretoria CBD, 0001
+            </p>
+
+            <h3>Sunday Service Details</h3>
+            <div class="details">
+                <table>
+                    <tr>
+                        <th>Intercession</th>
+                        <td>9am - 10am</td>
+                    </tr>
+                    <tr>
+                        <th>Main</th>
+                        <td>10am - 1pm</td>
+                    </tr>
+                    <tr>
+                        <th>Deliverance</th>
+                        <td>1pm - 2pm</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Contact Details</h3>
+            <div class="details">
+                <table>
+                    <tr>
+                        <th>Email Address</th>
+                        <td>info@mannatemple.co.za</td>
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <td>+27 73 851 4499</td>
+                    </tr>
+                    <tr>
+                        <th>Website</th>
+                        <td>www.mannatemple.co.za</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Leadership</h3>
+            <div class="details">
+                <table>
+                    <tr>
+                        <th>Apostle</th>
+                        <td>Shadrack Mabaso</td>
+                    </tr>
+                    <tr>
+                        <th>Deliverance</th>
+                        <td>1pm - 2pm</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- EVENTS ACTIVITY -->
+        <div class="EventsActivity Activity">
+            <!-- Activity Title -->
+            <div class="activity-title" hidden>Events</div>
+            <div class="loading"></div>
+
+            <div class="events-list">
+                <div class="event-skeleton">
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+                <div class="event-skeleton">
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+                <div class="event-skeleton">
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+                <div class="event-skeleton">
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+                <div class="event-skeleton">
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+                <div class="event-skeleton">
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- NEWSLETTER ACTIVITY -->
+        <div class="NewsletterActivity Activity">
+            <!-- Activity Title -->
+            <div class="activity-title" hidden>Newsletter</div>
+            <div class="loading"></div>
+            <div class="news-block">
+                <div class="block-skeleton">
+                    <div class="skeleton">
+                        <i class="material-icons">image</i>
+                    </div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+                <div class="block-skeleton">
+                    <div class="skeleton">
+                        <i class="material-icons">image</i>
+                    </div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+                <div class="block-skeleton">
+                    <div class="skeleton">
+                        <i class="material-icons">image</i>
+                    </div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+                <div class="block-skeleton">
+                    <div class="skeleton">
+                        <i class="material-icons">image</i>
+                    </div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+                <div class="block-skeleton">
+                    <div class="skeleton">
+                        <i class="material-icons">image</i>
+                    </div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+                <div class="block-skeleton">
+                    <div class="skeleton">
+                        <i class="material-icons">image</i>
+                    </div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                    <div class="skeleton"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT US ACTIVITY -->
+        <div class="OnDemandActivity Activity">
+            <!-- Activity Title -->
+            <div class="activity-title" hidden>Manna TV</div>
+
+            <!-- VIDEO PLAYER -->
+            <div class="main-video vu-player">
+                <iframe width="460" height="780" src="https://www.youtube.com/embed/videoseries?list=PLOoRTn_YGC9vFTsYINkbV6lNMts52EPbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
+                <!-- <img src="images/icon.png" alt="" class="logo-watermark"> -->
+                <!--<div class="controls">-->
+                <!--    <i class="material-icons vu-player-btns vu-play">pause</i>-->
+                <!--    <p hidden>LIVE-->
+                <!--        <i class="material-icons">sensors</i>-->
+                <!--    </p>-->
+                <!--    <div class="vu-video-time">-->
+                <!--        <span class="vu-time-elapsed">00:00</span> / -->
+                <!--        <span class="vu-duration">00:00</span>-->
+                <!--    </div>-->
+                <!--    <button type="button" class="primaryBtn" id="orderVideoBtn">-->
+                <!--        Buy Video-->
+                <!--        <i class="material-icons">shopping_cart</i>-->
+                <!--    </button>-->
+                <!--    <div class="volume">-->
+                <!--        <i class="material-icons vu-player-btns vu-volume">volume_up</i>-->
+                <!--        <input type="range" class="vu-video-volume" value = 100>-->
+                <!--    </div>-->
+                <!--    <i class="material-icons vu-player-btns vu-fullscreen">fullscreen</i>-->
+                <!--</div>-->
+            </div>
+
+            <!--<div class="video-filters">-->
+            <!--    <div class="filter allFilter active">All</div>-->
+            <!--    <div class="filter propheciesFilter">Prophecies</div>-->
+            <!--    <div class="filter sermonsFilter">Sermons</div>-->
+            <!--    <div class="filter testimoniesFilter">Testimonies</div>-->
+            <!--</div>-->
+            <!--<ul class="video-playlist">-->
+            <!--    <li class="vid">-->
+            <!--        <div class="loading"></div>-->
+            <!--    </li>-->
+            <!--</ul>-->
+        </div>
+
+        <footer>
+            <div class="item" id="radioBtn">
+                <i class="material-icons-outlined">radio</i>
+                <p class="label">Radio</p>
+            </div>
+            <!-- <div class="item" id="tvBtn">
+                <i class="material-icons-outlined">ondemand_video</i>
+                <p class="label">TV</p>
+            </div> -->
+            <div class="item active" id="vodBtn">
+                <i class="material-icons-outlined">ondemand_video</i>
+                <p class="label">TV</p>
+            </div>
+            <div class="item" id="prayerBtn">
+                <i class="material-icons-outlined">device_unknown</i>
+                <p class="label">Prayer</p>
+            </div>
+        </footer>
+
+        <script src="js/libraries/iconify.js"></script>
+        <script src="js/libraries/jquery-3.6.0.js"></script>
+        <script src="js/activitiez.js"></script>
+        <!-- <script src="js/header.js"></script> -->
+        <script src="js/footerz.js"></script>
+        <script src="js/send-prayer-requestz.js"></script>
+        <script src="js/data-requestz.js"></script>
+        <script src="js/side-menuz.js"></script>
+        <script src="js/libraries/vu-player.js"></script>
+        <script src="js/splash-screen.js"></script>
+        <script src="js/on-demand.js"></script>
+        <script src="js/bible-library.js"></script>
+    </body>
+</html>

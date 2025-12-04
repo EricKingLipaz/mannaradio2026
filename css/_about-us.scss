@@ -1,0 +1,14 @@
+.AboutUsActivity{
+    color: white;
+    table{
+        text-align: left;
+        margin: 1em 0;
+        margin-top: .5em;
+        th, td{
+            padding: .3em .5em;
+        }
+        th{
+            background: $color1;
+        }
+    }
+}

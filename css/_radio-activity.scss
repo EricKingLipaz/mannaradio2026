@@ -1,0 +1,73 @@
+.RadioActivity{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    .background{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: $dark1;
+        opacity: .3;
+        margin: 0;
+        z-index: -1000;
+        padding: 0;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .radio-container{
+        color: white;
+        @include middleCenter();
+        text-align: center;
+        width: 100%;
+        iframe{
+            height: 5em;
+        }
+        .on-air{
+            .host{
+                color: $color1;
+                font-weight: bold;
+            }
+            .loader{
+                width: 20%;
+                background: #29004b;
+                height: 100vh;
+                width: 100%;
+                z-index: 10000;
+                opacity: .8;
+                border-radius: 10px;
+                img{
+                    width: 20%;
+                    @include middleCenter();
+                }
+            }
+            #playRadio{
+                font-size: 3em;
+                z-index: 1000;
+                @include middleCenter;
+                margin: 4em 0;
+            }
+        }
+        .get-in-touch{
+            @include middleCenter();
+            width: 100%;
+            .radioIcon{
+                font-size: 5em;
+                margin: .2em 0;
+                color: $color1;
+            }
+            h3{
+                color: $lightGrey;
+                margin: 5em 0 .5em 0;
+            }
+            a{
+                button{
+                    margin: .5em;
+                    width: fit-content;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+}

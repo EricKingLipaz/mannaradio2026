@@ -1,0 +1,15 @@
+.main-menu{
+    position: fixed;
+    left: -85%;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 0 5px $lightGrey;
+    transition: .3s all;
+    .item{
+        font-size: 1.2em;
+        padding: .5em 1em;
+    }
+}

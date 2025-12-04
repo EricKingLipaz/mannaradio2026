@@ -1,0 +1,11 @@
+.Activity{
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    @include middleCenter();
+    overflow-y: scroll;
+    padding: .5em;
+    .activity-title{
+        font-size: .6em;
+    }
+}

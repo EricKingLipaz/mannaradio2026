@@ -1,0 +1,30 @@
+.PrayerActivity{
+    form{
+        text-align: center;
+        width: 100%;
+        color: white;
+        .inputs{
+            width: 90%;
+            font-size: 1.2em;
+            padding: .3em;
+            margin: .3em 0;
+        }
+        button{
+            width: 90%;
+            font-size: 1.2em;
+        }
+    }
+    .loader{
+        width: 20%;
+        height: 50vh;
+        width: 100%;
+        z-index: 10000;
+        opacity: .8;
+        border-radius: 10px;
+        position: fixed;
+            img{
+                width: 20%;
+                @include middleCenter();
+            }
+        }
+}

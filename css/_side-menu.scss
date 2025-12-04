@@ -1,0 +1,23 @@
+.side-menu{
+    background: $dark2;
+    position: fixed;
+    z-index: 1000;
+    width: 70%;
+    right: 0;
+    color: $light;
+    height: 100%;
+    padding-top: 20%;
+    transition: .3s;
+    right: -70%;
+    #closeMenuBtn{
+        @include topRight();
+        top: 5%;
+    }
+    .item{
+        font-size: 1.2em;
+        padding: .3em 1em;
+    }
+    .item.active{
+        background: $color1;
+    }
+}

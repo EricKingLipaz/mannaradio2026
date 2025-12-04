@@ -1,0 +1,35 @@
+.Admin{
+    header{
+        height: 7%;
+    }
+    .response{
+        color: white;
+        display: none;
+    }
+    footer{
+        display: flex;
+        padding: 0 1em;
+        height: 8%;
+        .items{
+            width: 7%;
+            color: $lightGrey;
+            border-radius: 50px;
+            margin-right: .3em;
+            transition: all .5s;
+            *{
+                transition: all .5s;
+            }
+        }
+        .items.active{
+            background: $color1;
+            display: flex;
+            color: white;
+            padding: .5em 1em;
+            width: fit-content;
+            border-radius: 50px;
+            *{
+                margin: 0 .2em;
+            }
+        }
+    }
+}
