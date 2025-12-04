@@ -1,0 +1,187 @@
+/* PWA Specific Styles */
+
+/* Install Prompt */
+.pwa-install-prompt {
+    position: fixed;
+    bottom: calc(var(--spacing-lg) + 60px);
+    left: 50%;
+    transform: translateX(-50%) translateY(200px);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    padding: var(--spacing-lg);
+    max-width: 400px;
+    width: 90%;
+    z-index: 200;
+    transition: transform var(--transition-base);
+}
+
+.pwa-install-prompt.show {
+    transform: translateX(-50%) translateY(0);
+}
+
+.install-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.install-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.install-text {
+    flex: 1;
+}
+
+.install-text h3 {
+    margin: 0 0 var(--spacing-xs) 0;
+    color: var(--text-primary);
+    font-size: 16px;
+}
+
+.install-text p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.install-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.install-btn {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.dismiss-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    padding: var(--spacing-sm);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+    font-size: 14px;
+}
+
+.dismiss-btn:hover {
+    color: var(--text-primary);
+}
+
+/* Update Notification */
+.pwa-update-notification {
+    position: fixed;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border: 1px solid var(--accent-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    transform: translateX(400px);
+    transition: transform var(--transition-base);
+    z-index: 201;
+}
+
+.pwa-update-notification.show {
+    transform: translateX(0);
+}
+
+.update-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.update-content i {
+    color: var(--accent-primary);
+    font-size: 24px;
+}
+
+.update-content span {
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.reload-btn {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* Offline Indicator */
+.offline-indicator {
+    position: fixed;
+    top: var(--spacing-md);
+    left: 50%;
+    transform: translateX(-50%) translateY(-100px);
+    background: #ef4444;
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 202;
+    transition: transform var(--transition-base);
+}
+
+.offline-indicator.show {
+    transform: translateX(-50%) translateY(0);
+}
+
+.offline-indicator i {
+    font-size: 18px;
+}
+
+/* Standalone mode adjustments */
+@media all and (display-mode: standalone) {
+    header {
+        padding-top: calc(var(--spacing-lg) + env(safe-area-inset-top, 0));
+    }
+
+    footer {
+        padding-bottom: calc(var(--spacing-md) + env(safe-area-inset-bottom, 0));
+    }
+}
+
+/* iOS specific */
+@supports (-webkit-touch-callout: none) {
+    .pwa-install-prompt {
+        bottom: calc(var(--spacing-lg) + 60px + env(safe-area-inset-bottom, 0));
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pwa-update-notification {
+        top: var(--spacing-sm);
+        right: var(--spacing-sm);
+        left: var(--spacing-sm);
+        max-width: calc(100% - var(--spacing-md) * 2);
+    }
+
+    .update-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+
+    .reload-btn {
+        width: 100%;
+    }
+}
