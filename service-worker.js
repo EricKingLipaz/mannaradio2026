@@ -1,11 +1,11 @@
-const CACHE_NAME = 'manna-temple-v1.0.0';
+const CACHE_NAME = 'manna-temple-v1.0.1';
 const RUNTIME_CACHE = 'manna-temple-runtime';
 
 // Assets to cache on install
 const PRECACHE_ASSETS = [
     '/index.html',
     '/css/app_style.css',
-    '/js/activitiez.js',
+    '/js/activitiez-v2.js',
     '/js/footerz.js',
     '/js/side-menuz.js',
     '/js/splash-screen.js',
@@ -65,8 +65,8 @@ self.addEventListener('fetch', (event) => {
                     // Only cache successful responses
                     if (response.status === 200) {
                         // Don't cache POST requests or streaming media
-                        if (request.method === 'GET' && 
-                            !request.url.includes('zeno.fm') && 
+                        if (request.method === 'GET' &&
+                            !request.url.includes('zeno.fm') &&
                             !request.url.includes('youtube.com')) {
                             cache.put(request, response.clone());
                         }

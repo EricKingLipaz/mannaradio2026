@@ -272,10 +272,17 @@ class ModernPlayer {
     }
 
     play() {
+        if (!this.video) return;
+
+        // Stop Radio if playing
+        if (window.pauseRadio) {
+            window.pauseRadio();
+        }
         this.video.play();
     }
 
     pause() {
+        if (!this.video) return;
         this.video.pause();
     }
 
